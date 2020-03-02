@@ -1,3 +1,6 @@
+
+亲测可用的基于docker的v2ray代理方式
+
 #### caddy 代理 websocket 流量转发给 v2ray 处理
 
 vmess over wss `ss vmess 这些自发明的翻墙协议最终都跑在tls里面:)`
