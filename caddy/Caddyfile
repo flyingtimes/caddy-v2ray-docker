@@ -1,8 +1,9 @@
-your.domain {
+funny.21cnai.com {
     log ./caddy.log
-    root /srv
     gzip
-    proxy /ws v2ray:8001 {
+    proxy / https://flyingtimes.github.io {
+    }
+    proxy /404notfound v2ray:8001 {
         websocket
         header_upstream -Origin
     }

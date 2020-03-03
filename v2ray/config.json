@@ -10,16 +10,16 @@
         "settings": {
             "clients": [
                 {
-                    "id": "uuid",
+                    "id": "aeb752cc-3ea1-43cf-a575-06c8e2d8fc59",
                     "level": 1,
-                    "alterId": 64
+                    "alterId": 233
                 }
             ]
         },
         "streamSettings": {
             "network": "ws",
             "wsSettings": {
-                "path": "/ws"
+                "path": "/404notfound"
             }
         }
     }],
