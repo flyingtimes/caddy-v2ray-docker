@@ -11,15 +11,6 @@ services:
     caddy:
         restart: always
         image: abiosoft/caddy
-
-        #image: luoqeng/caddy
-        
-        #image: caddy:latest
-        #build:
-            #context: github.com/abiosoft/caddy-docker.git
-            #args:
-                #- plugins=forwardproxy,ipfilter
-
         volumes:
             - ./caddy/Caddyfile:/etc/Caddyfile:ro
             - ./caddy/cert:/root/.caddy
@@ -29,3 +20,15 @@ services:
         ports:
             - "80:80"
             - "443:443"
+    shadowsocks:
+        image: imhang/kcp-shadowsocks-docker
+        environment:
+            - SS_PASSWORD=justdoit
+            - SS_METHOD=chacha20
+            - KCP_MODE=fast
+            - KCP_CRYPT=none
+            - KCP_KEY=justdoit
+        ports:
+            - "30010:443/tcp"
+            - "30010:443/udp"
+            - "30011:9443/udp"
